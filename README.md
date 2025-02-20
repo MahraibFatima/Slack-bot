@@ -1,2 +1,3 @@
-# Reaction-Handling
-A Slack bot that handles reactions on messages.
+# Slack Bot
+A Slack bot that can
+- soon will be updated.
