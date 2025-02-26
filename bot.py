@@ -29,7 +29,7 @@ def message(payload):
         if user_id in message_counts:
             message_counts[user_id] += 1
         else:
-            message_count[user_id] = 1
+            message_counts[user_id] = 1
         send_message(text)
 
 @app.route('/message-count', methods=['GET', 'POST'])
@@ -39,9 +39,10 @@ def message_count():
     channel_id = data.get('channel_id')
     message_count = message_counts.get(user_id, 0)
     client.chat_postMessage(channel=channel_id, text=f"Message: {message_count}")
-    return Response, 200
+    return Response(), 200
 
 if __name__ == "__main__": 
     app.run(debug=True)
-    send_message('Hello World!')
+    #message('Hello World!')
+    #send_message('Hello World!')
     
