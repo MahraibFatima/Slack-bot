@@ -100,11 +100,12 @@ def reaction(payload):
         return
 
     welcome = welcome_messages[f'@{user_id}'][user_id]
-    welcome.completed = True
     welcome.channel = channel_id
-    message = welcome.get_message()
+    welcome.completed = True
+    message = welcome.get_message_payload()
     updated_message = client.chat_update(**message)
     welcome.timestamp = updated_message['ts']
+
 
 @app.route('/message-count', methods=['GET', 'POST'])
 def message_count():
