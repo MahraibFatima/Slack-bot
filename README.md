@@ -79,7 +79,7 @@ Follow these steps to set up and run the Slack bot:
 
 1. **Clone the Repository**
    ```bash
-   git clone [<repository-link>](https://github.com/MahraibFatima/Slack-bot)
+   git clone https://github.com/MahraibFatima/Slack-bot
    cd slack-bot-project
    ```
 
